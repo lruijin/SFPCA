@@ -17,14 +17,17 @@ using Eigen::MatrixXd;
 using Eigen::VectorXd;
 using Eigen::Map;
 
+// Define the proximal operator
 VectorXd soft_thr(
     VectorXd x,
     double lam,
     bool pos)
 {
+  // Without non-negative constraints: max(x-lam,0) - max(-x-lam,0)
   if(!pos){
     return (x.array() - lam).cwiseMax(0) - (-1 * x.array() - lam).cwiseMax(0);
   }
+  //with negative constraits: max(x-lam,0)
   else{
     return (x.array() - lam).cwiseMax(0);
   }
