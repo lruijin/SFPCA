@@ -101,6 +101,7 @@ Rcpp::List sfpca_fixed(
       indu = (u - oldui).norm() / oldui.norm();
     }
     
+    //update v with u fixed
     while(indv > thr){
       oldvi = v;
       vtild = v + (Xhat.transpose() * u - Sv * v) / Lv;
@@ -118,6 +119,8 @@ Rcpp::List sfpca_fixed(
     iter = iter + 1;
   }
   
+  // calculated the rank-one eigen value
+  // returned value "Xhat" is the residual
   double d = u.transpose() * Xhat * v;
   return Rcpp::List::create(Rcpp::Named("U") = u / u.norm(),
                             Rcpp::Named("V") = v / v.norm(),
