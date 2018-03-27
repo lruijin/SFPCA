@@ -56,15 +56,20 @@ Rcpp::List sfpca_fixed(
   Su = Su + n * alphau * Omegu;
   Sv = Sv + p * alphav * Omegv;
   
+  // Calculate the largest eigen value for Su and Sv, in case of 0, 
+  // add a small number as jitter: 0.01
   double Lu, Lv;
   Lu = MatrixXd(Su).eigenvalues().real().maxCoeff() + 0.01;
   Lv = MatrixXd(Sv).eigenvalues().real().maxCoeff() + 0.01;
   
+  //set the threshold for convergence and initial values for the divergence
   float thr = 1e-6, indo = 1.0, indu = 1.0, indv=1.0;
   
   MatrixXd Xhat = X;
   MatrixXd utemp, vtemp;
   VectorXd u, v, oldu, oldv, oldui, oldvi, utild, vtild;
+  
+  //If the zero is given as a starter, use the rank-1 SVD of X to initialize u and v
   if(startu.sum() == 0){
     Eigen::BDCSVD<MatrixXd> bdc(X, Eigen::ComputeThinU | Eigen::ComputeThinV);
     utemp = bdc.matrixU();
@@ -82,6 +87,7 @@ Rcpp::List sfpca_fixed(
   while(indo < thr && iter < maxit){
     oldui = u;
     oldvi = v;
+    // update u with v fixed
     while(indu > thr){
       oldui = u;
       utild = u + (Xhat * v - Su * u) / Lu;
