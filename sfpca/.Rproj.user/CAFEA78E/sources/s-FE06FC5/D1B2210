@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522096090652.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D1B2210",
+    "lastKnownWriteTime" : 1522098513,
+    "last_content_update" : 1522098513747,
+    "path" : "~/Documents/lu/lu_test.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "27,22",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

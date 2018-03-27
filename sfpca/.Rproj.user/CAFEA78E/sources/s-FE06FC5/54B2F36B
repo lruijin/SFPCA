@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522099549367.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1423804674",
+    "id" : "54B2F36B",
+    "lastKnownWriteTime" : 1522099622,
+    "last_content_update" : 1522099622022,
+    "path" : "~/Documents/lu/sfpca/man/sfpca_fixed.Rd",
+    "project_path" : "man/sfpca_fixed.Rd",
+    "properties" : {
+        "cursorPosition" : "65,24",
+        "scrollLine" : "29"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}

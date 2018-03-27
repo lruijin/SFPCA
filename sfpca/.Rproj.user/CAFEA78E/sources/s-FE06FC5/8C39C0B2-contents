@@ -1,0 +1,26 @@
+\name{sfpca-package}
+\alias{sfpca-package}
+\alias{sfpca}
+\docType{package}
+\title{
+\packageTitle{sfpca}
+}
+\description{
+\packageDescription{sfpca}
+}
+\details{
+
+The DESCRIPTION file:
+\packageDESCRIPTION{sfpca}
+\packageIndices{sfpca}
+This package is created to implement the Sparse and Functional Algorithm(SFPCA)\link[(G.I.Allen, 2013)]{https://arxiv.org/abs/1309.2895} for the SFPCA model.
+}
+\author{Ruijin Lu(\email{lruijin@vt.edu}), Ph.D candidate, Department of Statistics, Virginia Tech}
+\references{
+G.I. Allen. "Sparse and Functional Principal Components Analysis." ArXiv Pre-Print 1309.2895 (2013). \link[https://arxiv.org/abs/1309.2895]{https://arxiv.org/abs/1309.2895}}
+
+\keyword{SFPCA, Modern Multivariate Analysis}
+\seealso{}
+\examples{
+    
+}
